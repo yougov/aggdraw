@@ -1,0 +1,13 @@
+--- agg2/include/agg_array.h 2005-05-03 17:57:34.000000000 +0530
++++ agg2/include/agg_array.h 2007-08-22 00:19:48.000000000 +0530
+@@ -520,7 +520,7 @@
+int8u* ptr = m_buf_ptr;
+if(alignment > 1)
+{
+	- unsigned align = (alignment - unsigned(ptr) %
+	alignment) % alignment;
+	+ unsigned align = (alignment - (unsigned
+	long)(ptr) % alignment) % alignment;
+	size += align;
+	ptr += align;
+	if(size <= m_rest)
